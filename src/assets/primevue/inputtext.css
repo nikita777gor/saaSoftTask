@@ -1,0 +1,45 @@
+.p-inputtext {
+  @apply appearance-none rounded-md w-full
+  border border-slate-300 dark:border-slate-700 /* Мягко серые рамки */
+  enabled:hover:border-slate-400 dark:enabled:hover:border-slate-600
+  enabled:focus:border-surface-500 dark:enabled:focus:border-surface-500 /* Синий цвет только для фокуса */
+  bg-surface-0 dark:bg-surface-950
+  text-slate-700 dark:text-slate-200 /* Мягко серый текст по умолчанию */
+  disabled:bg-slate-200 disabled:text-slate-500 dark:disabled:bg-slate-700 dark:disabled:text-slate-400 disabled:opacity-100
+  placeholder:text-slate-500 dark:placeholder:text-slate-400
+  px-3 py-2
+  transition-colors duration-200
+  shadow-[0_1px_2px_0_rgba(18,18,23,0.05)]
+  outline-none
+}
+
+/* При фокусе меняем текст на синий */
+.p-inputtext:enabled:focus {
+  @apply text-primary dark:text-primary;
+}
+
+/* Серый текст для неактивных состояний */
+.p-inputtext:disabled,
+.p-inputtext:not(:enabled) {
+  @apply text-slate-500 dark:text-slate-400;
+}
+
+.p-inputtext.p-invalid {
+  @apply border-red-400 dark:border-red-300
+}
+
+.p-inputtext.p-variant-filled {
+  @apply bg-surface-50 dark:bg-surface-800
+}
+
+.p-inputtext-sm {
+  @apply text-sm px-[0.625rem] py-[0.375rem]
+}
+
+.p-inputtext-lg {
+  @apply text-lg px-[0.875rem] py-[0.625rem]
+}
+
+.p-inputtext-fluid {
+  @apply w-full
+}

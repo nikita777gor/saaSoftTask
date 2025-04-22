@@ -1,0 +1,46 @@
+.p-fieldset {
+  @apply border border-slate-600 dark:border-slate-700 rounded-md
+  bg-slate-800 dark:bg-slate-900
+  text-slate-300 dark:text-slate-200
+  px-[1.125rem] pt-0 pb-[1.125rem];
+}
+
+.p-fieldset-legend {
+  @apply border border-transparent rounded-md px-3 py-2
+  transition-colors duration-200
+  text-surface-700 dark:text-surface-0; /* Оставляем заголовок в оригинальном стиле */
+}
+
+.p-fieldset-toggleable > .p-fieldset-legend {
+  @apply p-0;
+}
+
+.p-fieldset-toggle-button {
+  @apply select-none overflow-hidden relative
+  flex items-center justify-center gap-2
+  px-3 py-2
+  border-none rounded-md
+  bg-slate-700 dark:bg-slate-800
+  hover:bg-slate-600 dark:hover:bg-slate-700
+  text-slate-300 dark:text-slate-200
+  hover:text-slate-100 dark:hover:text-slate-50
+  focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-surface-500
+  transition-colors duration-200;
+}
+
+.p-fieldset-legend-label {
+  @apply font-semibold; /* Оставляем заголовок без изменений */
+}
+
+.p-fieldset-toggle-icon {
+  @apply text-slate-400 dark:text-slate-500
+  transition-colors duration-200;
+}
+
+.p-fieldset-toggle-button:hover .p-fieldset-toggle-icon {
+  @apply text-slate-200 dark:text-slate-300;
+}
+
+.p-fieldset .p-fieldset-content {
+  @apply p-0;
+}
